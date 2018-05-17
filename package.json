@@ -2,8 +2,10 @@
   "name": "citrine",
   "version": "1.0.0",
   "scripts": {
-    "client": "cd ../client && yarn start",
-    "server": "babel-node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js --exec babel-node",
+    "heroku-postbuild": "npm install",
+    "start": "babel-node server.js"
   },
   "dependencies": {
     "express": "^4.16.3",
@@ -15,7 +17,7 @@
   "devDependencies": {
     "babel": "6.23.0",
     "babel-cli": "6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "concurrently": "^3.5.0"
+    "babel-preset-env": "1.6.0",
+    "nodemon": "1.11.0"
   }
 }
