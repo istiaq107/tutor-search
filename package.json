@@ -1,0 +1,21 @@
+{
+  "name": "citrine",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "cd ../client && yarn start",
+    "server": "nodemon --exec babel-node server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "module-alias": "^2.0.6",
+    "pg": "^7.4.3",
+    "sequelize": "^4.37.7"
+  },
+  "_moduleAliases": {
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "concurrently": "^3.5.0"
+  }
+}
