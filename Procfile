@@ -1,1 +1,1 @@
-yarn run start
+web: npm run start
