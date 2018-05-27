@@ -19,7 +19,7 @@ pool.connect((err) => {
   }
 
   app.get('/', function (req, res) {
-    res.send({ express: 'Hello From CirclCI' });
+    res.send({ express: 'Hello properly From CirclCI' });
   });
 
   app.get('/posts', function (req, res) {
