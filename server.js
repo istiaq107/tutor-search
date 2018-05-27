@@ -18,16 +18,19 @@ pool.connect((err) => {
     console.log('DB connected')
   }
 
+  app.get('/', function (req, res) {
+    res.send({ express: 'Hello From CirclCI' });
+  });
+
   app.get('/posts', function (req, res) {
-    // res.send({ express: 'Hello From Express' });
     pool.query('SELECT * from posts', (err, out) => {
       if (err) {
         console.log(err.stack)
       } else {
         res.send(out.rows[0])
       }
-    })
-  })
+    });
+  });
 
   app.listen(port, () => console.log(`Listening on port ${port}`));
 });
