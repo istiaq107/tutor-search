@@ -5,6 +5,6 @@ general:
 
 deployment:
   staging:
-    branch: master
+    branch: deploy
     heroku:
       appname: tutor-search
