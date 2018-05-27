@@ -2,9 +2,9 @@
   "name": "citrine",
   "version": "1.0.0",
   "scripts": {
-    "client": "cd ../client && yarn start",
-    "server": "nodemon --exec babel-node server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "server": "nodemon server.js --exec babel-node",
+    "heroku-postbuild": "npm install",
+    "start": "babel-node server.js"
   },
   "dependencies": {
     "express": "^4.16.3",
