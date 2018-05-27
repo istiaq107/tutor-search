@@ -19,7 +19,7 @@ pool.connect((err) => {
   }
 
   app.get('/', function (req, res) {
-    res.send({ express: 'Hello only from deploy' });
+    res.send({ express: 'Hello should only from be deploy' });
   });
 
   app.get('/posts', function (req, res) {
